@@ -46,6 +46,23 @@ body{
     
 
 }
+
+
+
+.game-pause{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    animation: fadeIn 0.5s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
 .game-over h2{
     margin: 0px;
     font-size: 36px;

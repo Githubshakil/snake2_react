@@ -18,6 +18,7 @@ const [food, setFood] = useState(INITIAL_FOOD);
 const [direction, setDirection] = useState(INITIAL_DIRECTION);
 const [score, setScore] = useState(0);
 const [gameOver, setGameOver] = useState(false);
+const [gamePause, setGamePause] = useState(false)
 
 
 // food generation function
@@ -39,7 +40,7 @@ const generateFood = () => {
 // It will update the snake's position based on the direction
 
 const moveSnake = () => {
-  if (gameOver) return;
+  if (gameOver, gamePause) return;
   const head = { ...snake[0]};
   switch (direction) {
     case "UP":
@@ -114,11 +115,11 @@ useEffect(() => {
 
 // This function will start the game loop
 useEffect(() => {
-  const gameloop = setInterval((moveSnake), 200);
+  const gameLoop = setInterval((moveSnake), 200);
   return () => {
-    clearInterval(gameloop);
+    clearInterval(gameLoop);
   }
-},[snake, direction, gameOver]);
+},[snake, direction, gameOver , gamePause]);
 
 
 
@@ -153,7 +154,7 @@ let playAgain = () => {
 //score increse speed increase
 useEffect(() => {
   if (score > 0 && score % 100 === 0) {
-    clearInterval(gameloop);
+    clearInterval(gameLoop);
     setInterval(() => {
       moveSnake();
     }, 200 - score * 10);
@@ -180,8 +181,15 @@ useEffect(() => {
       </div>
       )
     }
-    <button onClick={() => setGameOver(false)}>Resume</button>
-    <button onClick={() => setGameOver(true)}>Pause</button>
+
+    {gamePause && (
+        <div className='game-pause'>
+     <button onClick={() => setGamePause(false)}>Resume</button>
+    </div>
+      )
+    }
+
+    <button onClick={() => setGamePause(true)}>Pause</button>
     
 
      </div>
