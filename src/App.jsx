@@ -12,7 +12,7 @@ const INITIAL_FOOD = {x: 15, y: 15};
 const INITIAL_DIRECTION = "RIGHT";
 
 
-// State variables for the game setup (do this second in the code)
+// State variables for the game setup (do this second in the code) changeble variable
 const [snake, setSnake] = useState(INITIAL_SNAKE);
 const [food, setFood] = useState(INITIAL_FOOD);
 const [direction, setDirection] = useState(INITIAL_DIRECTION);
