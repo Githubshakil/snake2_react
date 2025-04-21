@@ -104,9 +104,9 @@ useEffect(() => {
         break;
     }
   }
-  document.addEventListener("keydown", handeleKeyPress);
+  window.addEventListener("keydown", handeleKeyPress);
   return () => {
-    document.removeEventListener("keydown", handeleKeyPress);
+    window.removeEventListener("keydown", handeleKeyPress);
   };
 },[direction]);
 
