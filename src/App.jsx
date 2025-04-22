@@ -40,7 +40,7 @@ const generateFood = () => {
 // It will update the snake's position based on the direction
 
 const moveSnake = () => {
-  if (gameOver, gamePause) return;
+  if (gameOver || gamePause) return;
   const head = { ...snake[0]};
   switch (direction) {
     case "UP":
