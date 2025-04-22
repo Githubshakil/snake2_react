@@ -153,7 +153,7 @@ let playAgain = () => {
 
 //score increse speed increase
 useEffect(() => {
-  if (score > 0 && score % 100 === 0) {
+  if (score > 0 && score === 0) {
     clearInterval(gameLoop);
     setInterval(() => {
       moveSnake();
