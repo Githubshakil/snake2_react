@@ -181,18 +181,16 @@ useEffect(() => {
       </div>
       )
     }
-
     {gamePause && (
         <div className='game-pause'>
      <button onClick={() => setGamePause(false)}>Resume</button>
     </div>
       )
     }
-
-    <button onClick={() => setGamePause(true)}>Pause</button>
+     <button onClick={() => setGamePause(true)}>Pause</button>
+    </div>
     
 
-     </div>
  </>
   )
 }
